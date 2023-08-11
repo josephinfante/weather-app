@@ -5,6 +5,7 @@ import { Icons } from "./helpers/icons";
 import { WeatherCard } from "./components/WeatherCard";
 import LoadingSpinner from "./components/Loader";
 import { useApp } from "./hooks/useApp";
+import Thermometer from './assets/thermometer.webp';
 
 function App() {
   const { search, setSearch, weather, loading, containerRef, getWeather } = useApp();
@@ -31,7 +32,7 @@ function App() {
             <div className="w-[200px] lg:w-[300px] h-auto">{BigImages(weather.current.condition.text, getState(weather.location.localtime))}</div>
             <div className="w-full lg:w-auto">
               <div className="flex items-center mt-5 lg:mt-0 justify-center lg:justify-start">
-                <div className="h-[50px] w-auto"><img src="./src/assets/thermometer.webp" alt="thermometer" width={"100%"} height={"100%"}/></div>
+                <div className="h-[50px] w-auto"><img src={Thermometer} alt="thermometer" width={"100%"} height={"100%"}/></div>
                 <p className="text-4xl font-extrabold ml-3">{weather.current.temp_c}° C</p>
               </div>
               <div className="flex items-center justify-between lg:block">

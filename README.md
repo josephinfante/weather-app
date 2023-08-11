@@ -1,6 +1,7 @@
 # Weather App
 
 Welcome to the Weather App! This application provides you with real-time weather information powered by the [WeatherAPI](https://api.weatherapi.com) service. With this app, you can quickly check the weather conditions for different locations.
+Live demo: [https://weather-app.josephi.dev](https://weather-app.josephi.dev)
 
 ## Getting Started
 

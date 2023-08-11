@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <section className="h-screen py-5 flex flex-col justify-between">
-        <div>
+        <div style={!weather.location.name ? {height: "100vh", display: "flex", justifyContent: "center", alignItems: "center"}:{}}>
           <form className="w-full flex items-center justify-center" onSubmit={(e) => e.preventDefault()}>
             <Search value={search} onChange={value => setSearch(value)} onKeyDown={(e) => {
               if (e.key === 'Enter') {

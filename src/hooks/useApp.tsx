@@ -16,7 +16,11 @@ export const useApp = () => {
         setLoading(false);
     }
     useEffect(() => {
-        setTimeout(() => setLoading(false), 1000);
+        setTimeout(() => {
+            setLoading(false);
+            const footer = document.querySelector("#footer");
+            if (footer) (footer as HTMLElement).style.display = "block";
+        }, 1000);
     }, []);
     useEffect(() => {
         const container = containerRef.current;
